@@ -1,10 +1,26 @@
 package ru.netology.service;
 
-import static org.testng.Assert.*;
+import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+
+//import static org.testng.Assert.*;
 
 public class CashbackHackServiceTest {
 
-    @org.testng.annotations.Test
+    @Test
+    public void remain() {
+
+        CashbackHackService service = new CashbackHackService();
+        int expected = 1000;
+        int amount = 0;
+
+        int actual = service.remain(amount);
+
+        Assertions.assertEquals(expected, actual);
+    }
+
+
+    @Test
     public void shouldRemainIf0() {
 
         CashbackHackService service = new CashbackHackService();
@@ -14,12 +30,12 @@ public class CashbackHackServiceTest {
 
         int actual = service.remain(amount);
 
-        assertEquals(actual, expected);
+        Assertions.assertEquals(expected, actual);
 
     }
 
 
-    @org.testng.annotations.Test
+    @Test
     public void shouldRemainIf1() {
 
         CashbackHackService service = new CashbackHackService();
@@ -29,11 +45,11 @@ public class CashbackHackServiceTest {
 
         int actual = service.remain(amount);
 
-        assertEquals(actual, expected);
+        Assertions.assertEquals(expected, actual);
 
     }
 
-    @org.testng.annotations.Test
+    @Test
     public void shouldRemainIf500() {
 
         CashbackHackService service = new CashbackHackService();
@@ -43,11 +59,11 @@ public class CashbackHackServiceTest {
 
         int actual = service.remain(amount);
 
-        assertEquals(actual, expected);
+        Assertions.assertEquals(expected, actual);
 
     }
 
-    @org.testng.annotations.Test
+    @Test
     public void shouldRemainIf999() {
 
         CashbackHackService service = new CashbackHackService();
@@ -57,11 +73,11 @@ public class CashbackHackServiceTest {
 
         int actual = service.remain(amount);
 
-        assertEquals(actual, expected);
+        Assertions.assertEquals(expected, actual);
 
     }
 
-    @org.testng.annotations.Test
+    @Test
     public void shouldRemainIf1000() {
 
         CashbackHackService service = new CashbackHackService();
@@ -71,11 +87,11 @@ public class CashbackHackServiceTest {
 
         int actual = service.remain(amount);
 
-        assertEquals(actual, expected);
+        Assertions.assertEquals(expected, actual);
 
     }
 
-    @org.testng.annotations.Test
+    @Test
     public void shouldRemainIf1001() {
 
         CashbackHackService service = new CashbackHackService();
@@ -85,11 +101,11 @@ public class CashbackHackServiceTest {
 
         int actual = service.remain(amount);
 
-        assertEquals(actual, expected);
+        Assertions.assertEquals(expected, actual);
 
     }
 
-    @org.testng.annotations.Test
+    @Test
     public void shouldRemainIf2000() {
 
         CashbackHackService service = new CashbackHackService();
@@ -99,11 +115,11 @@ public class CashbackHackServiceTest {
 
         int actual = service.remain(amount);
 
-        assertEquals(actual, expected);
+        Assertions.assertEquals(expected, actual);
 
     }
 
-    @org.testng.annotations.Test
+    @Test
     public void shouldRemainIf2001() {
 
         CashbackHackService service = new CashbackHackService();
@@ -113,11 +129,10 @@ public class CashbackHackServiceTest {
 
         int actual = service.remain(amount);
 
-        assertEquals(actual, expected);
-
+        Assertions.assertEquals(expected, actual);
     }
 
-    @org.testng.annotations.Test
+    @Test
     public void shouldRemainIf2999() {
 
         CashbackHackService service = new CashbackHackService();
@@ -127,9 +142,7 @@ public class CashbackHackServiceTest {
 
         int actual = service.remain(amount);
 
-        assertEquals(actual, expected);
-
+        Assertions.assertEquals(expected, actual);
     }
-
-
 }
+
